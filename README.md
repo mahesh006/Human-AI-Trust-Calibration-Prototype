@@ -28,11 +28,11 @@ Upon loading the application, a user is randomly assigned to one of two conditio
 * **Confidence:** It shows a "calibrated" confidence style. I built a dynamic SVG progress arc that shows a precise, mathematically estimated accuracy percentage.
 
 ### Condition B (Social / Humanlike)
-<img width="958" height="420" alt="Screenshot 2026-02-22 000413" src="https://github.com/user-attachments/assets/3c8593f2-5c3e-4bdf-be43-f156539ee79f" />
+<img width="960" height="419" alt="Screenshot 2026-03-21 234920" src="https://github.com/user-attachments/assets/84606a46-4f9f-42e4-8966-48217638ae50" />
 
 * **Persona:** "Alex" (Your AI assistant).
 * **Tone:** It uses a friendly, conversational tone.
-* **Confidence:** Instead of a statistical arc, it provides a confident, conversational assertion ("I'm quite sure about this one — go for it!").
+* **Confidence:** Instead of a statistical arc, it provides a confident, conversational assertion with accuracy percentage (eg: "I'm about 76% sure about this one — go for it!").
 
 **Implementation Details:** The rendering function (`rTask`) fetches the active condition's properties from the `CONDITIONS` object and injects them into the template literal. CSS classes (like `${c.tone}`) are dynamically applied to alter the visual presentation, and conditional rendering (using a ternary operator) swaps out the HTML for the confidence widget entirely based on the assigned condition.
 
