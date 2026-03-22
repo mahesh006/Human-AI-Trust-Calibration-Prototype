@@ -16,8 +16,8 @@ const CONDITIONS = {
     avatarLabel: "A",
     tone: "social",
     confidenceStyle: "certain",
-    intro: () =>
-      `Hey! I looked into this carefully and I'm feeling confident about what you should do here — here's my recommendation.`,
+    intro: (s) =>
+      `Hey! I looked into this carefully and I'm ${s.accuracy}% confident about what you should do here — here's my recommendation.`,
   },
 };
 
@@ -213,7 +213,7 @@ function rTask(el) {
             : `
         <div class="conf-widget certain">
           <div style="font-size:26px;flex-shrink:0">✦</div>
-          <div class="conf-txt">I'm quite sure about this one — go for it!</div>
+          <div class="conf-txt">I'm about ${s.accuracy}% sure about this one — go for it!</div>
         </div>`
         }
         <div class="dec-btns">
